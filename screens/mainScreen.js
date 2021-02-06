@@ -53,7 +53,7 @@ em.on("about", () => {
     modal: true,
     show: false,
     width: 350,
-    height: 200,
+    height: 300,
     resizable: false,
     maximizable: false,
     webPreferences: {
