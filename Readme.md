@@ -28,9 +28,9 @@ Just Install it from [releases](https://github.com/niksingh710/PdfMerger/release
 
 ## Preview
 
-![Image](https://github.com/niksingh710/PdfMerger/tree/master/assets/1.png)
+![Image](https://github.com/niksingh710/PdfMerger/blob/master/asset/1.png)
 
-![Image](https://github.com/niksingh710/PdfMerger/tree/master/assets/1.png)
+![Image](https://github.com/niksingh710/PdfMerger/blob/master/asset/1.png)
 
 ## TODO
 
