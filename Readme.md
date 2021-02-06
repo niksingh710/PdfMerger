@@ -22,6 +22,7 @@ npm start
 
 If you are a linux user, `Snap` build is recommended over `AppImage`. You can download the snap from snapstore.
 
+<iframe src="https://snapcraft.io/pdfmerger/embedded?button=black" frameborder="0" width="100%" height="310px" style="border: 1px solid #CCC; border-radius: 2px;"></iframe>
 ## Windows
 
 Just Install it from [releases](https://github.com/niksingh710/PdfMerger/releases) and run.
