@@ -27,6 +27,10 @@ If you are a linux user, `Snap` build is recommended over `AppImage`. You can do
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pdfmerger)
 
+```bash
+sudo snap install pdfmerger
+```
+
 ## Windows
 
 Just Install it from [releases](https://github.com/niksingh710/PdfMerger/releases) and run.
