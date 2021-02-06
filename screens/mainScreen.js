@@ -43,7 +43,7 @@ ipcMain.on("save", (e) => {
 ipcMain.on("get-version", (e) => {
   e.returnValue = app.getVersion();
 });
-em.on("about", () => {
+em.on("update", () => {
   check(true);
 });
 

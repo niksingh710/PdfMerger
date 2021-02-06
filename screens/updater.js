@@ -7,7 +7,6 @@ autoUpdater.autoDownload = false;
 
 exports.check = (manual = false) => {
   autoUpdater.checkForUpdates();
-  autoUpdater.logger.info("Going to prompt");
 
   if (manual) {
     autoUpdater.on("update-not-available", () => {

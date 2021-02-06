@@ -16,10 +16,11 @@
     "linux": {
       "target": [
         "AppImage",
-        "snap"
+        "snap",
+        "deb"
       ],
       "category": "Network",
-      "icon": "./build/icon/icon.png",
+      "icon": "./build/icon/",
       "publish": [
         "github"
       ]
@@ -35,7 +36,7 @@
       "target": [
         "nsis"
       ],
-      "icon": "./build/icon/icon.png",
+      "icon": "./build/icon/icon.ico",
       "publish": [
         "github"
       ]
