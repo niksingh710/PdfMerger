@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html body {
+  font-size: 1.6rem;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html ::selection {
+  color: white;
+  background: #000;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 1500px;
+  font-family: sans-serif;
+}
+
+.card--front, .card--back {
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.8);
+}
+
+.card--front {
+  background: #fff;
+}
+
+.card--front .title {
+  color: #aaa;
+}
+
+.card--front .version {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.card--front .dev-name {
+  margin: 1rem 0;
+  font-weight: 100;
+  color: darkgrey;
+}
+
+.card--front .info {
+  color: #aaa;
+}
+
+.card--back {
+  background: #fff;
+  transform: rotateY(180deg);
+}
+
+.card--back .profile {
+  min-width: max-content;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card--back .profile button {
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  font-size: 3rem;
+}
+
+.card--back .profile button:focus, .card--back .profile button:active {
+  outline: none;
+}
+
+.card--back .profile button:hover {
+  color: #2ae;
+}
+
+.card--back .text {
+  margin-top: 5rem;
+}
+
+.card:hover .card--front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card--back {
+  transform: rotateY(0);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

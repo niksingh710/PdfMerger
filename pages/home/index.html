@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PdfMerger</title>
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id="drop" class="drop">Drop Here</div>
+    <!-- Testing drag drop -->
+    <!-- <div class="drop-zone" id="drop-zone">Drag Here</div> -->
+    <!-- Test area 💀 -->
+
+    <div class="pdf-container" id="pdf-container">
+        <ul id="list-container" class="list-container">
+
+            <!-- Example li -->
+
+            <!-- <li>
+                <div class="draggable" draggable="true" data-index="${id}" data-id="${id}">
+                    <span class="name">
+                <span class="index">1</span>
+                        name
+                    </span>
+                    <div><span class="size">1024MB</span>
+                        <span class="drag-pick"><i class="fas fa-bars"></i></span>
+                        <div>
+                            <button class="remove" onclick="'removeData(${id})'" data-id="${id}"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+            </li> -->
+
+        </ul>
+    </div>
+    <div class="btns">
+        <button id="submit" class="submit btn">Merge</button><button id="clear" class="clear btn"><i
+                class="fas fa-trash"></i> Clear</button>
+    </div>
+
+</body>
+<script>
+    require('./js/index');
+    const {
+        em,
+    } = require("./js/data");
+
+
+    const removeData = (id) => {
+        em.emit('removeid', id);
+    };
+</script>
+
+</html>

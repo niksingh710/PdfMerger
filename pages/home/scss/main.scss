@@ -1,0 +1,157 @@
+@import "misc";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  body {
+    font-size: 1.6rem;
+    height: 100vh;
+    font-family: sans-serif;
+    @include flex-center;
+  }
+}
+
+.drop {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-radius: 2rem;
+  box-shadow: 0 0 4rem rgba(#000, 0.6);
+  @include flex-center;
+  font-size: 4rem;
+  color: #aaa;
+  text-shadow: 0 0.2rem rgba(#000, 0.6);
+  z-index: 200;
+  width: 80%;
+  height: 20rem;
+  background: darken(white, 5%);
+}
+.pdf-container {
+  min-width: 100%;
+  width: max-content;
+  min-height: max-content;
+  height: 100%;
+  background: white;
+  @include flex-center;
+  align-items: stretch;
+
+  ul {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 22rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    list-style: none;
+    min-width: max-content;
+    width: 100%;
+    margin-top: 4rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    li {
+      padding: 1rem 0;
+      background: darken(white, 5%);
+      border-right: 2px transparent solid;
+      box-shadow: 0 0.6rem 0.4rem rgba(#000, 0.4);
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &:last-child {
+        margin-bottom: 10rem;
+      }
+      .draggable {
+        width: 100%;
+        @include flex-center;
+        justify-content: space-between;
+      }
+      &:hover {
+        border-right: 2px red solid;
+        .remove {
+          display: block;
+        }
+      }
+      .drag-pick {
+        cursor: pointer;
+        margin-right: 2rem;
+      }
+      position: relative;
+      span {
+        display: inline-block;
+        padding: 1rem 1rem;
+      }
+
+      .size {
+        font-size: 1rem;
+        color: #aaa;
+        text-align: center;
+      }
+      .remove {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        border: none;
+        padding: 1rem;
+        background: red;
+        color: white;
+        display: none;
+      }
+    }
+  }
+}
+.btns {
+  position: fixed;
+  bottom: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  .btn {
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    color: #2ae;
+    background: white;
+    box-shadow: 0 2rem 2rem rgba(#000, 0.5);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #2ae;
+      color: white;
+      & > i.active {
+        color: red;
+      }
+    }
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0 2rem 4rem rgba(#000, 0.5);
+    }
+  }
+}
+
+.dragging {
+  opacity: 0.5;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translate(0, -50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #2ae;
+  }
+}

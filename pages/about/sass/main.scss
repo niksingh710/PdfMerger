@@ -1,0 +1,112 @@
+@import "misc";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  body {
+    font-size: 1.6rem;
+    height: 100vh;
+    font-family: sans-serif;
+    @include flex-center;
+  }
+  ::selection {
+    color: white;
+    background: #000;
+  }
+}
+
+.card-container {
+  @include flex-center;
+  // background: red;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 1500px;
+  font-family: sans-serif;
+  &--front,
+  &--back {
+    border-radius: 2rem;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.8);
+  }
+  &--front {
+    background: #fff;
+    .title {
+      color: #aaa;
+    }
+    .version {
+      font-size: 1.4rem;
+      font-family: sans-serif;
+      display: inline-block;
+      margin: 1rem 0;
+    }
+
+    .dev-name {
+      margin: 1rem 0;
+      font-weight: 100;
+      color: darkgrey;
+    }
+    .info {
+      color: #aaa;
+    }
+  }
+
+  &--back {
+    background: #fff;
+    transform: rotateY(180deg);
+
+    .profile {
+      min-width: max-content;
+      width: 100%;
+      height: max-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        border: none;
+        width: 1rem;
+        height: 1rem;
+        font-size: 3rem;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+        &:hover {
+          color: #2ae;
+        }
+      }
+    }
+    .text {
+      margin-top: 5rem;
+    }
+  }
+
+  &:hover &--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &--back {
+    transform: rotateY(0);
+  }
+}
+
+.center {
+  @include pos-center;
+  text-align: center;
+}

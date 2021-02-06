@@ -1,0 +1,64 @@
+{
+  "name": "pdfmerger",
+  "productName": "Pdf Merger",
+  "version": "1.0.0",
+  "description": "Simple pdf merge app for desktop created using electron by Nikhil Singh <https://t.me/niksingh710>",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:linux": "electron-builder -l",
+    "build:win": "electron-builder -w",
+    "build:lw": "electron-builder -lw",
+    "publish:lw": "electron-builder -lw -p 'onTagOrDraft'"
+  },
+  "build": {
+    "appId": "com.niksingh710.test",
+    "linux": {
+      "target": [
+        "AppImage",
+        "snap"
+      ],
+      "category": "Network",
+      "icon": "./build/icon/icon.png",
+      "publish": [
+        "github"
+      ]
+    },
+    "snap": {
+      "confinement": "strict",
+      "grade": "stable",
+      "plugs": [
+        "default"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./build/icon/icon.png",
+      "publish": [
+        "github"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": "https://github.com/niksingh710/PdfMerger.git",
+  "homepage": "https://github.com/niksingh710",
+  "author": "Nikhil Singh <nik.singh710@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.2.2",
+    "electron-builder": "^22.9.1",
+    "electron-reloader": "^1.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "electron-log": "^4.3.1",
+    "electron-updater": "^4.3.5",
+    "electron-window-state": "^5.0.3",
+    "pdf-merger-js": "^3.0.5"
+  }
+}
