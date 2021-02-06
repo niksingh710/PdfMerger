@@ -30,7 +30,7 @@ Just Install it from [releases](https://github.com/niksingh710/PdfMerger/release
 
 ![Image](https://github.com/niksingh710/PdfMerger/blob/master/asset/1.png)
 
-![Image](https://github.com/niksingh710/PdfMerger/blob/master/asset/1.png)
+![Image](https://github.com/niksingh710/PdfMerger/blob/master/asset/2.png)
 
 ## TODO
 
