@@ -1,6 +1,9 @@
 # Pdf Merger
 
 A simple Desktop app built on Electron.
+Simplicity to merge pdfs.
+
+Any suggestions or feature addition is highly appreciated.
 
 ## Build
 
