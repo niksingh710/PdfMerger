@@ -31,6 +31,8 @@ If you are a linux user, `Snap` build is recommended over `AppImage`. You can do
 sudo snap install pdfmerger
 ```
 
+If Facing any issues using snap try using native build (.deb,.rpm) from [releases](https://github.com/niksingh710/PdfMerger/releases) .
+
 ## Windows
 
 Just Install it from [releases](https://github.com/niksingh710/PdfMerger/releases) and run.
